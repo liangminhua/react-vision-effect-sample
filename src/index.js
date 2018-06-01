@@ -4,6 +4,7 @@ import Heart from "./Heart";
 import MouseBalls from "./MouseBalls";
 import TextParticle from "./TextParticle";
 import CanvasNest from "./CanvasNest";
+import MixIn from "./Mixin";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import registerServiceWorker from "./registerServiceWorker";
 import "./index.css";
@@ -12,19 +13,6 @@ const App = () => {
   return (
     <Router>
       <div style={{ height: "100%" }}>
-        <div>
-          <Link className="marginRight" to="/">
-            Heart
-          </Link>
-          <Link className="marginRight" to="/canvasNest">
-            CanvasNest
-          </Link>
-
-          <Link className="marginRight" to="/textParticle">
-            TextParticle
-          </Link>
-          <Link to="/mouseBalls">MouseBalls</Link>
-        </div>
         <Route exact path="/" render={() => <Heart text="I Love you" />} />
         <Route
           exact
@@ -38,6 +26,10 @@ const App = () => {
         <Route
           path="/mouseBalls"
           render={() => <MouseBalls maxBalls={50} updateInterval={10} />}
+        />
+        <Route
+          path="/mixin"
+          render={() => <MixIn  />}
         />
       </div>
     </Router>

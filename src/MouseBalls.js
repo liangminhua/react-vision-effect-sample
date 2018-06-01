@@ -108,6 +108,7 @@ class MouseBalls extends Component {
             return null;
           }
         })}
+        {this.props.children}
       </div>
     );
   }
