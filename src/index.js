@@ -5,7 +5,7 @@ import MouseBalls from "./MouseBalls";
 import TextParticle from "./TextParticle";
 import CanvasNest from "./CanvasNest";
 import MixIn from "./Mixin";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 import registerServiceWorker from "./registerServiceWorker";
 import "./index.css";
 
